@@ -1,0 +1,155 @@
+.projetos__container{
+    grid-template-columns: repeat(2, max-content);
+    gap: 3rem;
+    justify-content: center;
+}
+
+.projetos__img{
+    width: 295px;
+    border-radius: 1rem;
+    margin-bottom: var(--mb-1);
+}
+
+.projetos__card{
+    background-color: var(--container-color);
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 1.25rem;
+    border-radius: .5rem;
+}
+
+.projetos__title{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-5);
+}
+
+.projetos__button{
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    cursor: pointer;
+}
+
+.projetos__links{
+    margin: .4rem;
+    gap: 1.5rem;
+    margin-left: 4rem;
+    display: flex;
+}
+
+.projetos__subtitle{
+    height: 2rem;
+    display: flex;
+}
+
+.projetos__links-button{
+    justify-items: center;
+    text-align: center;
+}
+
+.projetos__links-icons{
+    color: var(--title-color);
+    font-size: 1.5rem; 
+    vertical-align: text-bottom;
+}
+
+.projetos__links-icons-subtitle{
+    font-size: var(--tiny-font-size);
+    display: block;
+    color: var(--title-color-dark);
+    font-weight: var(--font-medium);
+}
+
+.projetos__button-icon{
+    font-size: 1rem;
+    transition: .3s;
+}
+ 
+.projetos__button:hover .projetos__button-icon{
+    transform: translateX(.25rem)
+}
+
+.projetos__filtros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .75rem;
+    margin-bottom: var(--mb-2);
+}
+
+.projetos__item{
+    color: var(--title-color);
+    padding: .25rem .75rem;
+    border-radius: .5rem;
+    text-transform: capitalize;
+    font-weight: var(--font-medium);
+    cursor: pointer;
+}
+
+.projetos__item:hover{
+    background-color: var(--title-color);
+    color: var(--container-color);
+}
+/*active works*/
+
+.projetos-active{
+    background-color: var(--title-color);
+    color: var(--container-color);
+}
+
+/* Breakpoints */
+/* For large devices */
+@media screen and (max-width: 992px) {
+    
+    .projetos__container{
+       gap: 1.25rem; 
+    }
+
+    .projetos__card{
+        padding: 1rem;
+    }
+
+    .projetos__img{
+        margin-bottom: .75rem;
+    }
+
+    .projetos__title{
+        margin-bottom: .25rem;
+    }
+  }
+  
+  /* For medium devices */
+  @media screen and (max-width: 768px) {
+
+    .projetos__container{
+        grid-template-columns: max-content;
+    }
+
+}
+
+  
+  @media screen and (max-width: 576px) {
+  
+    .projetos__container{
+        grid-template-columns: 1fr;
+    }
+
+    .projetos__img{
+        width: 100%;
+
+    }
+
+}
+  
+  /* For small devices */
+  @media screen and (max-width: 350px) {
+   .projetos__item{
+    font-size: var(--small-font-size);
+   }
+
+   .projetos__filtros{
+    column-gap: .25rem;
+   }
+  }
