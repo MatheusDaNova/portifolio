@@ -15,18 +15,21 @@ const ProjetoItens = ({ item }) => {
                     <span className="projetos__button" onClick={() => setIsVisible(!isVisible)}>
                         Demo <i className="bx bx-right-arrow-alt projetos__button-icon"></i>
                     </span>
-                    {isVisible && <div key={item.id} className="projetos__links">
-                        <a href={item.git} className="projetos__links-button">
-                            <i className="bx bxl-github projetos__links-icons"></i>
-                            
-                            <span className='projetos__links-icons-subtitle'>Github</span>
-                        </a>
-                        <a href={item.demo}>
+                    {isVisible && 
+                    (<div key={item.id} className="projetos__links">
+                        {item.git && item.git.trim() !== "" && (
+                            <a href={item.git} className="projetos__links-button" target='_blank'>
+                                <i className="bx bxl-github projetos__links-icons"></i>
+                                
+                                <span className='projetos__links-icons-subtitle'>Github</span>
+                            </a>
+                        )}
+                        <a href={item.demo} className="projetos__links-button" target='_blank'>
                             <i className="bx bx-globe projetos__links-icons" ></i>
                             
                             <span className='projetos__links-icons-subtitle'>Acesse</span>
                         </a>
-                    </div>}
+                    </div>)}
             </div>
         </div>
     )
